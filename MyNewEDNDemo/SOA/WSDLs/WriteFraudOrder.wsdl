@@ -1,0 +1,29 @@
+<wsdl:definitions
+     name="WriteFraudOrder"
+     targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/file/MyNewEDNDemo/MyNewEDNDemo/WriteFraudOrder"
+     xmlns:tns="http://xmlns.oracle.com/pcbpel/adapter/file/MyNewEDNDemo/MyNewEDNDemo/WriteFraudOrder"
+     xmlns:jca="http://xmlns.oracle.com/pcbpel/wsdl/jca/"
+     xmlns:plt="http://schemas.xmlsoap.org/ws/2003/05/partner-link/"
+     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+     xmlns:imp1="http://www.oracle.com/oep"
+    >
+  <plt:partnerLinkType name="WriteFraudOrder_plt" >
+    <plt:role name="WriteFraudOrder_role" >
+      <plt:portType name="tns:WriteFraudOrder_ptt" />
+    </plt:role>
+  </plt:partnerLinkType>
+    <wsdl:types>
+      <schema targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/file/MyNewEDNDemo/MyNewEDNDemo/WriteFraudOrder"
+              xmlns="http://www.w3.org/2001/XMLSchema" >
+        <import namespace="http://www.oracle.com/oep" schemaLocation="../Schemas/canonicalOrder.xsd" />
+      </schema>
+    </wsdl:types>
+    <wsdl:message name="WriteFraudOrder_msg">
+        <wsdl:part name="body" element="imp1:MyFraudOrder"/>
+    </wsdl:message>
+    <wsdl:portType name="WriteFraudOrder_ptt">
+        <wsdl:operation name="WriteFraudOrder">
+            <wsdl:input message="tns:WriteFraudOrder_msg"/>
+        </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

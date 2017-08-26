@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns0:definitions xmlns:ns0="http://schemas.oracle.com/events/edl" targetNamespace="http://xmlns.oracle.com/Application2/Project1/FraudCheckEvent">
+   <ns0:schema-import location="../Schemas/FraudCheckType.xsd" namespace="http://www.oracle.com/oep"/>
+   <ns0:event-definition name="FraudCheckRequest">
+      <ns0:content xmlns:ns1="http://www.oracle.com/oep" element="ns1:FraudCheckRequest"/>
+   </ns0:event-definition>
+   <ns0:event-definition name="FraudCheckResponse">
+      <ns0:content xmlns:ns2="http://www.oracle.com/oep" element="ns2:FraudCheckResponse"/>
+   </ns0:event-definition>
+</ns0:definitions>

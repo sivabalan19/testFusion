@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<decisionServices xmlns="http://xmlns.oracle.com/bpel/rules" name="test">
+    <ruleEngineProvider provider="Oracle_11.0.0.0.0" name="OracleRulesSDK">
+        <repository type="SCA-Archive">
+            <path>sample12/oracle/rules/sample12/test.rules</path>
+        </repository>
+    </ruleEngineProvider>
+    <decisionService name="test_DecisionService_1" ruleEngineProviderReference="OracleRulesSDK" targetNamespace="http://xmlns.oracle.com/test/test_DecisionService_1">
+        <catalog>test</catalog>
+        <pattern name="CallFunctionStateless">
+            <arguments>
+                <call>sample12.test.DecisionService_1</call>
+            </arguments>
+        </pattern>
+        <pattern name="CallFunctionStateful">
+            <arguments>
+                <call>sample12.test.DecisionService_1</call>
+            </arguments>
+        </pattern>
+    </decisionService>
+    <schemaInformation>
+        <dictionary fqnPackage="sample12" fqnName="test" updateNumber="7">
+            <schemaBrowser>
+                <package>com.oracle.xmlns.proj_fusion12c.sample12.bpelprocess1</package>
+                <namespace>http://xmlns.oracle.com/proj_Fusion12c/sample12/BPELProcess1</namespace>
+            </schemaBrowser>
+            <schemaImport namespace="http://xmlns.oracle.com/proj_Fusion12c/sample12/BPELProcess1" localPart="BPELProcess1.xsd" schemaLocation="Schemas/BPELProcess1.xsd">
+                <import namespace="http://xmlns.oracle.com/proj_Fusion12c/sample12/BPELProcess1" localPart="BPELProcess1.xsd" schemaLocation="Schemas/BPELProcess1.xsd"/>
+            </schemaImport>
+        </dictionary>
+    </schemaInformation>
+</decisionServices>

@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<definitions xmlns="http://schemas.oracle.com/events/edl" targetNamespace="http://xmlns.oracle.com/MyNewEDNDemo/MyNewEDNDemo/OrderArrivedEventDef">
+   <schema-import location="../Schemas/canonicalOrder.xsd" namespace="http://www.oracle.com/oep"/>
+   <event-definition name="OrderArrivedEvent">
+      <content xmlns:ns1="http://www.oracle.com/oep" element="ns1:MyPurchaseOrder"/>
+   </event-definition>
+</definitions>

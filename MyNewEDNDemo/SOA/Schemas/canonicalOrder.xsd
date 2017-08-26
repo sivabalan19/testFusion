@@ -1,0 +1,39 @@
+<?xml version= '1.0' encoding= 'UTF-8' ?>
+<xs:schema targetNamespace="http://www.oracle.com/oep" elementFormDefault="qualified"
+           attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.oracle.com/oep">
+    
+    <xs:element name="MyPurchaseOrder" type="OrderType">
+        <xs:annotation>
+            <xs:documentation>The canonical order element</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="OrderType">
+        <xs:sequence>
+            <xs:element name="orderNr" type="xs:string"/>
+            <xs:element name="custFirstName" type="xs:string"/>
+            <xs:element name="custLastName" type="xs:string"/>
+            <xs:element name="custEmail" type="xs:string"/>
+            <xs:element name="custCountry" type="xs:string"/>
+            <xs:element name="exportRestriction" type="xs:string"/>
+            <xs:element name="orderStatus" type="xs:string"/>
+            <xs:element name="product" type="xs:string"/>
+            <xs:element name="supplier" type="xs:string"/>
+            <xs:element name="unitPrice" type="xs:int"/>
+            <xs:element name="quantity" type="xs:int"/>
+            <xs:element name="totalPrice" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+      <xs:element name="MyFraudOrder" type="FraudOrderType">
+        <xs:annotation>
+            <xs:documentation>The canonical order element</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="FraudOrderType">
+        <xs:sequence>
+            <xs:element name="orderNr" type="xs:string"/>
+            <xs:element name="comments" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+  
+   </xs:schema>

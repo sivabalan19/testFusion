@@ -1,0 +1,38 @@
+<?xml version= '1.0' encoding= 'UTF-8' ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.oracle.com/oep" targetNamespace="http://www.oracle.com/oep"
+     elementFormDefault="qualified">
+    <xsd:element name="FraudCheckRequest" type="FraudCheckRequestType"/>
+    <xsd:element name="FraudCheckResponse" type="FraudCheckResponseType"/>
+    <xsd:complexType name="FraudCheckRequestType">
+        <xsd:sequence>
+            <xsd:element name="OrderNumber" minOccurs="1">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="25"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="OrderDate" type="xsd:dateTime" minOccurs="1"/>
+            <xsd:element name="Email" minOccurs="1">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="50"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="TotalAmount" type="xsd:double" minOccurs="1"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="FraudCheckResponseType">
+        <xsd:sequence>
+            <xsd:element name="OrderNumber" minOccurs="1">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="25"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="Status" type="xsd:string" minOccurs="1"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

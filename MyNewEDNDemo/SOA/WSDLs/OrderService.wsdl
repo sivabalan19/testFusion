@@ -1,0 +1,22 @@
+<?xml version= '1.0' encoding= 'UTF-8' ?>
+<wsdl:definitions
+     name="OrderService"
+     targetNamespace="http://oracle.com/sca/soapservice/MyNewEDNDemo/MyNewEDNDemo/OrderService"
+     xmlns:tns="http://oracle.com/sca/soapservice/MyNewEDNDemo/MyNewEDNDemo/OrderService"
+     xmlns:inp1="http://www.oracle.com/oep"
+     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    >
+    <wsdl:types>
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:import namespace="http://www.oracle.com/oep" schemaLocation="../Schemas/canonicalOrder.xsd"/>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="requestMessage">
+        <wsdl:part name="part1" element="inp1:MyPurchaseOrder"/>
+    </wsdl:message>
+    <wsdl:portType name="execute_ptt">
+        <wsdl:operation name="execute">
+            <wsdl:input message="tns:requestMessage"/>
+        </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

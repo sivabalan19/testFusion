@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Faults>
+   <Fault>
+      <severity>warning</severity>
+      <loc>/ns:composite/ns:component[@name='sample/TaskService']</loc>
+      <line/>
+      <col/>
+      <file>/home/siva/jdeveloper/mywork/proj-Fusion12c/sample12/SOA/composite.xml</file>
+      <name>/home/siva/jdeveloper/mywork/proj-Fusion12c/sample12/SOA/composite.xml</name>
+      <fix/>
+      <msg>The service "TaskService" exposed by component "sample" is not wired to/used by any other component.</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>Mediators/sdasd.mplan</file>
+      <name>Mediators/sdasd.mplan</name>
+      <fix/>
+      <msg>Operation\Event "process" does not contain case. No operation\event will be executed\processed respectively.</msg>
+   </Fault>
+   <Fault>
+      <severity>error</severity>
+      <loc>test</loc>
+      <line/>
+      <col/>
+      <file/>
+      <name/>
+      <fix/>
+      <msg>Rule Dictionary test is invalid.</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>HumanTasks/sample.task</file>
+      <name>HumanTasks/sample.task</name>
+      <fix/>
+      <msg>Task title not specified</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>HumanTasks/sample.task</file>
+      <name>HumanTasks/sample.task</name>
+      <fix/>
+      <msg>Empty Participant definition for Stage1.Participant2</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>HumanTasks/sample.task</file>
+      <name>HumanTasks/sample.task</name>
+      <fix/>
+      <msg>Task owner not specified</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>HumanTasks/sample.task</file>
+      <name>HumanTasks/sample.task</name>
+      <fix/>
+      <msg>Error assignee not specified</msg>
+   </Fault>
+   <Fault>
+      <severity>warning</severity>
+      <loc/>
+      <line/>
+      <col/>
+      <file>HumanTasks/sample.task</file>
+      <name>HumanTasks/sample.task</name>
+      <fix/>
+      <msg>Payload not specified</msg>
+   </Fault>
+</Faults>
